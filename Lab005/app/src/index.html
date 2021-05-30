@@ -6,24 +6,25 @@
     <title>Note-App</title>
   </head>
   <body>
-    <div id="newNote">
-      <div>
-        <label for="title">Tytuł</label>
-        <input type="text" name="title" id="title">
+    <main>
+      <div id="newNote">
+        <div><input id="title" type="text" placeholder="Title" /></div>
+        <div>
+          <span contenteditable data-placeholder="Create a note..."></span>
+        </div>
+        <input type="checkbox" id="pinned" name="pinned" />
+        <label for="pinned">Pin Note</label>
+        <button id="addNewNote">Add Note</button>
       </div>
-      <div>
-        <label for="content">Treść</label>
-        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+      <div class="notes">
+        <div class="pinned">
+          <label>Pinned</label>
+        </div>
+        <div class="others">
+          <label>Others</label>
+        </div>
       </div>
-      <div>
-        <label for="isPinned">Przypnij</label>
-        <input type="checkbox" name="isPinned" id="isPinned">
-      </div>
-      <button id="addNewNote">Utwórz notatkę</button>
-    </div>
-    <section id="notes">
-      
-    </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

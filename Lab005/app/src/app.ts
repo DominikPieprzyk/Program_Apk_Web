@@ -1,42 +1,33 @@
-import { Note } from './note';
+import { Note } from "./note";
 
 export class App {
-    notes: Note[] = [];
-    constructor() {
-        this.start();
-    }
-    start(): void {
-        document.querySelector('#addNewNote')
-            .addEventListener('click', () => {
-                this.addNewNote;
-            });
-            this.loadNotes();
-    }
-    loadNotes(): void {
-        const noteList = localStorage.getItem('noteList');
-        if(noteList===null){
-            return;
-        }
-        const notes: Note[] = JSON.parse(noteList);
-        this.notes = notes;
+  notes: Note[] = [];
+  constructor() {
+    this.start();
+  }
+  start(): void {
+    document.querySelector("#addNewNote").addEventListener("click", () => {
+      this.addNewNote();
+    });
+  }
+  loadNotes(): void {
+    if (this.notes.length == 0) return;
+    console.log(this.notes);
+  }
 
-    }
+  addNewNote(): void {
+    const newNoteTitle: string =
+      document.querySelector<HTMLInputElement>("#title").value;
+    const newNoteText: string =
+      document.querySelector("[contenteditable]").textContent;
+    const isPinned: boolean =
+      document.querySelector<HTMLInputElement>("#pinned").checked;
+    this.notes.push(new Note(newNoteTitle, newNoteText, isPinned));
 
-    addNewNote(): void {
-        const newNoteTitle: string = document.querySelector<HTMLInputElement>('#title').value;
-        const newNoteContent: string = document.querySelector<HTMLInputElement>('#content').value;
-        const newNoteIsPinned: boolean = document.querySelector<HTMLInputElement>('#isPinned').checked;
-    }
-    
-    saveData(data: any) {
-        localStorage.setItem('weatherData', JSON.stringify(data));
-    }
-    getData() {
-        const data = localStorage.getItem('weatherData');
-        if (data) {
-            return JSON.parse(data);
-        } else {
-            return {};
-        }
-    }
+    this.loadNotes();
+  }
+
+  saveData(data: any) {
+    localStorage.setItem("notes", JSON.stringify(data));
+  }
 }
