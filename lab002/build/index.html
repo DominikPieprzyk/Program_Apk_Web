@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio src="../sounds/hihat.wav" data-sound="hihat" data-key="q"></audio>
+    <audio src="../sounds/clap.wav"  data-sound="clap"  data-key="w"></audio>
+    <audio src="../sounds/boom.wav"  data-sound="boom"  data-key="e"></audio>
+    <audio src="../sounds/kick.wav"  data-sound="kick"  data-key="r"></audio>
+    <audio src="../sounds/openhat.wav"  data-sound="openhat"  data-key="a"></audio>
+    <audio src="../sounds/ride.wav"  data-sound="ride"  data-key="s"></audio>
+    <audio src="../sounds/snare.wav"  data-sound="snare"  data-key="d"></audio>
+    <audio src="../sounds/tink.wav"  data-sound="tink"  data-key="f"></audio>
+    <audio src="../sounds/tom.wav"  data-sound="tom"  data-key="z"></audio>
+
+    <div class="buttonPlayWrapper">
+        <button class="keyButton" data-keybutton="q">Q</button>    
+        <button class="keyButton" data-keybutton="w">w</button> 
+        <button class="keyButton" data-keybutton="e">e</button> 
+        <button class="keyButton" data-keybutton="r">r</button> 
+        <button class="keyButton" data-keybutton="a">a</button> 
+        <button class="keyButton" data-keybutton="s">s</button> 
+        <button class="keyButton" data-keybutton="d">d</button> 
+        <button class="keyButton" data-keybutton="f">f</button> 
+        <button class="keyButton" data-keybutton="z">z</button> 
+    </div>
+
+    <div class="btnChannelWrapper">
+        <button class="btnChannel" data-channel="0">Play Channel 1</button>
+        <button class="recordChannel" data-record="0">Rec</button>
+        <div class="progressBarWrapper">
+            <span class="progressBar" data-progressbar="0"></span>
+        </div>
+    </div>
+
+    <div class="btnChannelWrapper">
+        <button class="btnChannel" data-channel="1">Play Channel 2</button>
+        <button class="recordChannel" data-record="1">Rec</button>
+        <div class="progressBarWrapper">
+            <span class="progressBar" data-progressbar="1"></span>
+        </div>
+    </div>
+
+    <div class="btnChannelWrapper">
+        <button class="btnChannel" data-channel="2">Play Channel 3</button>
+        <button class="recordChannel" data-record="2">Rec</button>
+        <div class="progressBarWrapper">
+            <span class="progressBar" data-progressbar="2"></span>
+        </div>
+    </div>
+
+    <div class="btnChannelWrapper">
+        <button class="btnChannel" data-channel="3">Play Channel 4</button>
+        <button class="recordChannel" data-record="3">Rec</button>
+        <div class="progressBarWrapper">
+            <span class="progressBar" data-progressbar="3"></span>
+        </div>
+    </div>
+    <button class="allBtnChannel"  id="allChannels">All Channels</button>
+    <script src="index.js"></script>
+</body>
+</html>
