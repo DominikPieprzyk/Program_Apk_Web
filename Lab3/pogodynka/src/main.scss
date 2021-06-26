@@ -1,0 +1,141 @@
+$background-top-gradient: #083800;
+$background-bottom-gradient: #88ff00;
+$background-button-color: #5bce5b;
+$background-button-color-hover: #a0f568;
+$text-color: #ffffff;
+$border-collor: #ffffff;
+$weather-text-color: #ffffff;
+$box-color:#fff;
+$city-fontSize: 20px;
+$weather-fontSize: 15px;
+$weather-fontSize-details: 13px;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image: linear-gradient( $background-top-gradient, $background-bottom-gradient);
+
+}
+.mainWrapper{
+  button{
+    background-color: $background-button-color;
+    border: transparent;
+    border-radius: 4%;
+  }
+  button:hover{
+    background-color: $background-button-color-hover;
+  }
+}
+
+.inputWrapper{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  
+  input:hover{
+    background-color: #a3a3a36c;
+  }
+}
+
+.inputCity{
+  background-color: transparent;
+  border: $border-collor 1px solid;
+  width: 25vw;
+  height: 3vw;
+  color: $box-color;
+  text-align: center;
+
+
+  &::placeholder{
+    color: $text-color;
+  }
+}
+
+.btnCity{
+  margin-left: 10px;
+  background-color: transparent;
+  border: $border-collor 1px solid;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: $text-color;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;  
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.weatherWrapper{
+  width: 220px;
+  height: 270px;
+  border: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.weatherMain{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.weatherCity{
+  color: $weather-text-color;
+  font-size: $city-fontSize;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.weatherTemp{
+  color: $weather-text-color;
+  font-size: $weather-fontSize;
+  text-transform: uppercase;
+}
+
+.weatherCoulds{
+  font-size: $weather-fontSize;
+  color: $weather-text-color;
+}
+
+.weatherDetails{
+  border-top: 2px $border-collor solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  
+  span{
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+  }
+}
+
+.weatherHumidity{
+  font-size: $weather-fontSize-details;
+  color: $weather-text-color;
+}
+
+.weatherPressure{
+  font-size: $weather-fontSize-details;
+  color: $weather-text-color;
+}
+
+.removeCityButton{
+  font-size: $weather-fontSize-details;
+  color: $weather-text-color;
+  background-color: $background-button-color;
+  width: 50px;
+  padding: 5px;
+  border: 1px $border-collor solid;
+}
