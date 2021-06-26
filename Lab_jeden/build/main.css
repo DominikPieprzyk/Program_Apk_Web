@@ -1,0 +1,80 @@
+* {
+    font-family: 'KoHo', sans-serif;
+}
+
+body {
+    height: 25vh;
+    position: relative;
+    margin: 0;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    margin-right: -40%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    display: grid;
+    border: 0.75em solid hsla(106, 88%, 67%, 0.753);
+    padding: auto;
+}
+
+.box div{
+    padding: 2em;
+    margin: 1em;
+    align-content: stretch;
+}
+
+.counter-box, 
+.input-data-box, 
+.stats-data-box{
+    align-items: center;
+    justify-content: center;
+    background: hsla(120, 78%, 79%, 0.863);
+}
+.counter-box h2,
+.counter-box p{
+    text-align: center;
+}
+
+.counter-box input{
+    border-style: none;
+    padding: 1em;
+    margin-left: 1.9em;
+}
+
+.counter-box button{
+    padding: 1em;
+    border-style: none;
+    border-radius: 13%;
+}
+
+.input-data-box input{
+    text-align: center;
+    font-weight: bolder;
+    color: hsl(0, 0%, 13%);
+    border-style: none;
+    padding: 1em;
+    margin: 0.2em;
+}
+
+.stats-data-box{
+    display: grid;
+}
+
+.stats-data-box input{
+    text-align: center;
+    font-weight: bolder;
+    color: hsl(0, 0%, 13%);
+    background-color:hsla(120, 91%, 83%, 0.863);
+    border-style: none;
+    padding: 1em;
+    margin: 0.3em;
+}
+
+.stats-data-box p{
+    font-weight: 4000;
+    text-align: center;
+    padding: 0;
+}
+
